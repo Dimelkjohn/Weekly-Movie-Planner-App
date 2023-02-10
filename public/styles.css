@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(39, 39, 59);
+  height: 100vh;
+  color: white;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h4, #shuffle {
+  font-family: "DM Serif Display";
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.content {
+  text-align: center;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+#shuffle {
+  font-size: 20px;
+  color: rgb(39, 39, 59);
+  width: 200px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+}
+
+#shuffle:hover {
+  background-color: rgb(204, 204, 204);
+  cursor: pointer;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-info {
+  margin-top: 10px;
+}
+
+.movie-info > * {
+  width: 150px;
+}
+
+.movie-info h4, .movie-info p {
+  text-align: left;
+}
+
+.movie-info p {
+  margin-top: 0;
+}
+
+.movie-info h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
