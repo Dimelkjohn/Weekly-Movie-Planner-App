@@ -5,6 +5,7 @@ function App()
 {
     // state managing if user has been in the page for 4 secs
     const [landedStatus, setLandedStatus] = useState(false);
+    const [shuffled, setShuffled] = useState(true);
 
     // Display intro blob for 4 secs, then movie recommendations  
     setTimeout(() => 
@@ -18,7 +19,12 @@ function App()
       {
           setLandedStatus(true);
         }, 600);   
-      }, 4000);
+    }, 4000);
+
+    function handleShuffle()
+    {
+      setShuffled(true);
+    }
 
     return (
       landedStatus === false?
@@ -31,7 +37,19 @@ function App()
           <p>Ready, set? Let's begin your new viewing experience!</p>  
         </div>
       :
-        <MoviePapa />
+      <div className="content animate__animated animate__fadeInUp">
+            <h1>Movies? Check. Popcorn? ...Check?</h1>
+
+            <MoviePapa 
+              shuffled={shuffled} 
+              setShuffled={setShuffled}
+            />
+            
+            <p>Not really feeling these movies? That's okay, just give it a good ol' shuffle!</p>
+
+            <button id="shuffle" onClick={handleShuffle}>Shuffle</button>
+      </div>
+        
     );
 }
 
