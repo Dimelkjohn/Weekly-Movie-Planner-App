@@ -1,11 +1,14 @@
 body {
   background-color: rgb(39, 39, 59);
+  /* background: linear-gradient(rgb(39, 39, 59), black 160%); */
   height: 100vh;
   color: white;
   font-family: "Poppins";
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, h4, #shuffle {
@@ -27,6 +30,10 @@ h1 {
   column-gap: 20px;
 }
 
+.placeholder {
+  height: 404px;
+}
+
 #shuffle {
   font-size: 20px;
   color: rgb(39, 39, 59);
@@ -42,26 +49,31 @@ h1 {
 }
 
 .movie-poster {
-  width: 100%;
+  border-radius: 4px;
+  /* border: .2px solid rgba(255, 255, 255, 0.658); */
 }
 
-.movie-info {
+.movie-poster:hover {
+  cursor: pointer;
+}
+
+.movie-card {
   margin-top: 10px;
 }
 
-.movie-info > * {
+.movie-card > * {
   width: 150px;
 }
 
-.movie-info h4, .movie-info p {
+.movie-card h4, .movie-card p {
   text-align: left;
 }
 
-.movie-info p {
+.movie-card p {
   margin-top: 0;
 }
 
-.movie-info h4 {
+.movie-card h4 {
   margin-top: 10px;
   margin-bottom: 0;
 }
